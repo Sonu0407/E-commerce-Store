@@ -1,0 +1,108 @@
+
+
+:root {
+    --base-color: white;
+    --text-color: #343a40;
+    --secondary-text-color: #2A2A72;
+    --primary-color: black;
+    --cart-color: #009FFD;
+    --cost-color: black;
+    --background-color: white;
+    --card-color: white;  
+}
+
+.darkmode {
+    --base-color: white;
+    --text-color: white;
+    --secondary-text-color: #009FFD;
+    --primary-color: black;
+    --cart-color: #009FFD;
+    --cost-color: #009bff;
+    --background-color: #111;
+    --card-color: #343A40; 
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.item_name {
+    color: var(--text-color);
+}
+
+.card {
+    background-color: var(--card-color);
+}
+
+.cost_color {
+    color: var(--cost-color);
+}
+
+.product-bg {
+    height: 100%;
+    width: 1490px;
+}
+
+.our-products {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    letter-spacing: 3px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 2.85rem;
+}
+
+.products { 
+    color: var(--text-color);
+    
+}
+
+.color {
+    color: var(--secondary-text-color);
+}
+.cart_animation {
+    border: 2px solid var(--primary-color);
+    background-color: var(--cart-color);
+    color: var(--base-color);
+    padding: 5px 10px;
+    height: 42px;
+    width: 54px;
+    position: absolute;
+    top: 250px;
+    left: 285px;
+    font-size: 1.5rem;
+    animation-name: cart_animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transition: color 1s ease-in-out 0.7s, transform 1.5s ease;
+    cursor: pointer;
+}
+
+/* .card:hover .image-and-cart, */
+.card:hover .cart_animation {
+    transform: translate(-55px, -55px);
+    /* color: var(--primary-color); */
+}
+
+i:hover {
+    color: var(--primary-color);
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+    margin: 42px 22px 22px 32px;
+}
+
+.image-and-cart {
+    animation-name: image_animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transition: 1.5s linear;
+}
+
+.card:hover .image-and-cart{
+    height: 155px;
+    width: 155px; 
+}

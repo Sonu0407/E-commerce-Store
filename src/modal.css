@@ -1,0 +1,83 @@
+:root {
+    --pop-up-box: rgb(227, 227, 227);
+    --base-color: white;
+    --font-color: black;
+    --continue-button-color: #007bff;
+    --cart-button-color: #28a745;
+}
+
+.darkmode {
+    --pop-up-box: #2f3338;
+    --base-color: white;
+    --font-color: white;
+    --continue-button-color: #007bff;
+    --cart-button-color: #28a745;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: var(--primary-color); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: var(--pop-up-box);
+  padding: 25px;
+  border-radius: 15px;
+  width: 350px;
+  height: 600px;
+  text-align: center;
+  animation: popup 0.3s ease-in-out;
+  color: var(--font-color);
+}
+
+.modal-img {
+  width: 224px;
+  height: 230px;
+  margin: 25px 25px 35px 40px;
+}
+
+/* .modal-buttons {
+  margin-top: 15px;
+  gap: 15px;
+} */
+
+.continue-btn,
+.cart-btn {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  font-size: 1.25rem;
+}
+
+.continue-btn {
+  background: var(--continue-button-color);
+  color: var(--font-color);
+}
+
+.cart-btn {
+  background: var(--cart-button-color);
+  color: var(--font-color);
+}
+
+/* popup animation */
+@keyframes popup {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

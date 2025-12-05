@@ -1,0 +1,238 @@
+:root {
+  --base: white;
+  --text-secondary-color: #2a2370;
+  --quantity-box-color: black;
+  --text-color: black;  
+}
+
+.darkmode {
+  --base: #000000;
+  --text-secondary-color: #009FFD;
+  --quantity-box-color: rgb(255, 255, 255);
+  --text-color: white; 
+}
+
+/* container */
+.cart-bg {
+  padding: 30px 40px;
+  min-height: 70vh;
+  box-sizing: border-box;
+  background: var(--base);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+}
+
+/* title */
+.cart-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  margin: 4px 0 30px;
+}
+.cart-title span {
+  color: var(--text-secondary-color); /* deep purple/blue like your screenshot */
+}
+
+/* table layout */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  table-layout: fixed;
+}
+
+/* header style */
+.cart-table thead th {
+  padding: 20px 10px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+/* body cells */
+.cart-table tbody td {
+  padding: 18px 10px;
+  vertical-align: middle;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* product image */
+.cart-table td img {
+  display: block;
+  max-width: 80px;
+  height: auto;
+  margin: 0 200px auto auto;
+}
+
+/* name cell: keep left alignment to match screenshot */
+.cart-table tbody td:nth-child(2) {
+  text-align: left;
+  padding-left: 20px;
+  margin-left: 25px;
+}
+
+/* price and total centering */
+.cart-table tbody td:nth-child(3),
+.cart-table tbody td:nth-child(6) {
+  text-align: center;
+}
+
+/* quantity box */
+.qty-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.qty-box button {
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--quantity-box-color);
+  background: transparent;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 120ms ease, background 120ms ease;
+}
+
+.qty-box button:hover {
+  transform: translateY(-2px);
+}
+
+.qty-box span {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--quantity-box-color);
+  font-weight: 800;
+  font-size: 16px;
+}
+
+/* trash icon */
+.trash-icon {
+  font-size: 22px;
+  color: orange;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 120ms ease, color 120ms ease;
+}
+
+.trash-icon:hover {
+  color: darkorange;
+  transform: scale(1.15);
+}
+
+/* cart summary area - right side */
+.cart-summary {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* right aligned */
+  gap: 18px;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+/* clear cart button */
+.clear-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 2px solid #d9534f; /* red border */
+  background: transparent;
+  color: #d9534f;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease;
+  letter-spacing: 1px;
+}
+
+.clear-btn:hover {
+  background: #d9534f;
+  color: #fff;
+}
+
+/* summary numbers - large */
+.cart-summary p {
+  font-size: 22px;
+  margin: 0;
+}
+
+/* small-screen / responsive */
+@media (max-width: 980px) {
+  .cart-table thead th,
+  .cart-table tbody td {
+    font-size: 14px;
+    padding: 12px 6px;
+  }
+
+  .cart-title {
+    font-size: 36px;
+  }
+
+  .cart-summary {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* very small screens: stack rows */
+@media (max-width: 640px) {
+  .cart-table,
+  .cart-table thead,
+  .cart-table tbody,
+  .cart-table th,
+  .cart-table td,
+  .cart-table tr {
+    display: block;
+  }
+
+  .cart-table thead {
+    display: none;
+  }
+
+  .cart-table tbody tr {
+    margin-bottom: 18px;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .cart-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+  }
+
+  .qty-box {
+    gap: 6px;
+    color: var(--text-color);
+  }
+
+  .cart-summary {
+    margin-top: 18px;
+  }
+}
+
+.Back-to-btn {
+  padding: 10px;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.plus {
+  color: var(--text-color);
+}
+
+.minus {
+  color: var(--text-color);
+}
