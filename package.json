@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Sonu0407.github.io/E-commerce-Webpage/",
+  "homepage": "https://sonu0407.github.io/E-commerce-Store/",
   "name": "reactproject2",
   "version": "0.1.0",
   "private": true,
@@ -45,3 +45,4 @@
     "gh-pages": "^6.3.0"
   }
 }
+
